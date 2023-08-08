@@ -1,0 +1,232 @@
+.dark-black-background {
+    background-color: #222831;
+}
+
+.dark-black-text {
+    color: #222831;
+}
+
+.light-black-background {
+    background-color: #393E46;
+}
+
+.light-black-text {
+    color: #393E46;
+}
+
+.cyan-background {
+    background-color: #00ADB5;
+}
+
+.cyan-text {
+    color: #00ADB5;
+}
+
+#cyan-button {
+    background-color: #00ADB5;
+    color: #EEEEEE;
+}
+
+.grey-background {
+    background-color: #EEEEEE;
+}
+
+.grey-text {
+    color: #EEEEEE;
+}
+
+#light-footer {
+    background-color: #393E46;
+}
+
+#dark-footer {
+    background-color: #222831;
+}  
+
+.fit-screen {
+    height: 92vh;
+}
+
+span {
+    font-size: 15px;
+}
+
+/*PROJECTS CSS BEGINS*/
+.contain {
+margin: 0;
+padding: 0;
+}
+.projects {
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 92vh;
+}
+.encapsulate {
+position: relative;
+width: 1160px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+transform-style: preserve-3d;
+perspective: 500px;
+margin: auto;
+}
+.encapsulate .box {
+position: relative;
+width: 275px;
+height: 400px;
+background: #000;
+transition: 0.5s;
+transform-style: preserve-3d;
+overflow: hidden;
+margin-right: 15px;
+margin-top: 45px;
+}
+.encapsulate:hover .box {
+transform: rotateY(25deg);
+}
+.encapsulate .box:hover ~ .box {
+transform: rotateY(-25deg);
+}
+.encapsulate .box:hover {
+transform: rotateY(0deg) scale(1.25);
+z-index: 1;
+box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+.encapsulate .box .imgBx {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+.encapsulate .box .imgBx:before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(180deg,#00ADB5,#000);
+z-index: 1;
+opacity: 0;
+transition: 0.5s;
+mix-blend-mode: multiply;
+}
+.encapsulate .box:hover .imgBx:before {
+opacity: 1;
+}
+.encapsulate .box .imgBx img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.encapsulate .box .content {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+display: flex;
+padding: 20px;
+align-items: flex-end;
+box-sizing: border-box;
+}
+.encapsulate .box .content h2 {
+color: #fff;
+transition: 0.5s;
+text-transform: uppercase;
+margin-bottom: 5px;
+font-size: 20px;
+transform: translateY(200px);
+transition-delay: 0.2s;
+}
+.encapsulate .box:hover .content h2 {
+transform: translateY(0px);
+}
+.encapsulate .box .content p {
+color: #fff;
+transition: 0.5s;
+font-size: 14px;
+transform: translateY(200px);
+transition-delay: 0.2s;
+}
+.encapsulate .box:hover .content p {
+transform: translateY(0px);
+}
+/*PROJECTS CSS ENDS*/
+
+/*EXTRACURRICULAR CSS BEGINS*/
+.img-wrapper {
+	width: 40%;
+	margin: 20px auto;
+}
+
+/* animation */
+div.gallery ul li, div.gallery li img {
+	-webkit-transition: all 0.1s ease-in-out;
+  	-moz-transition: all 0.1s ease-in-out;
+  	-o-transition: all 0.1s ease-in-out;
+  	transition: all 0.1s ease-in-out;
+}
+
+div.gallery ul li {
+	position: relative;
+	float: left;
+	width: 130px;
+	height: 130px;
+	margin: 5px;
+	padding: 5px;
+	z-index: 0;
+}
+
+/* Make sure z-index is higher on hover */
+/* Ensure that hover image overlapped the others */
+div.gallery ul li:hover {
+	z-index: 5;
+}
+
+/* Image is position nicely under li */
+div.gallery img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 1px solid #00ADB5;
+	padding: 5px;
+	width: 130px;
+	height: 130px;
+	background: #f0f0f0;
+}
+
+div.gallery img:hover {
+	width: 200px;
+	height: 200px;
+	margin-top: -130px;
+	margin-left: -130px;
+	top: 65%;
+	left: 65%;
+}
+
+/* Responsive hack */
+@media only screen and (min-width: 499px) and (max-width: 1212px) {
+	.img-wrapper {
+		width: 500px;
+	}
+}
+
+@media only screen and (max-width: 498px) {
+	.img-wrapper {
+		width: 300px;
+	}
+
+	div.gallery ul {
+		list-style-type: none;
+		margin: 0;
+	}
+}
+/*EXTRACURRICULAR CSS ENDS*/
